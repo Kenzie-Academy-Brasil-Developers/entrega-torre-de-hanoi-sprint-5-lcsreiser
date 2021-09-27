@@ -23,6 +23,8 @@ main #start {
     height: 30%;
     margin: auto;
     border: 1px solid;
+    justify-content: center;
+    align-items: center;
 }
 
 main #offset {
@@ -32,6 +34,8 @@ main #offset {
     height: 30%;
     margin: auto;
     border: 1px solid;
+    justify-content: center;
+    align-items: center;
 }
 
 main #end {
@@ -41,14 +45,19 @@ main #end {
     height: 30%;
     margin: auto;
     border: 1px solid;
+    justify-content: center;
+    align-items: center;
 }
 
 main #start:hover {
     background-color: rgb(211, 211, 211);
+    
+
 }
 
 main #offset:hover {
     background-color: rgb(211, 211, 211);
+    
 }
 
 main #end:hover {
@@ -56,12 +65,45 @@ main #end:hover {
 }
 
 .torre {
-    margin: auto;
-    position:relative;
-    transform: translateY(50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: black;
-    height: 50%;
+    height: 100px;
     width: 10px;
-    border-radius: 10px 10px 0 0 ;
+    border-radius: 10px 10px 0 0;
+    justify-content: end;
+    
 }
 
+.disco {
+    height: 15px;
+    display: flex;
+    border-radius: 5px;
+}
+
+.d1 {
+    background-color: red;
+    width: 20px;
+    border: 2px solid;
+}
+
+.d2 {
+    background-color: yellow;
+    width: 40px;
+    border: 2px solid;
+}
+
+.d3 {
+    background-color: blue;
+    width: 80px;
+   
+    border: 2px solid;
+}
+
+.d4 {
+    background-color: orange;
+    width: 110px;
+   
+    border: 2px solid;
+}
