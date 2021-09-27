@@ -12,6 +12,7 @@ const discos = document.querySelector('.disco')
 
 discos.addEventListener('click', pegarDisco)
 
+
 function pegarDisco(event){
 
 
@@ -19,6 +20,8 @@ function pegarDisco(event){
     console.log(jogo.tagName)
     if(jogo.tagName === 'DIV'){
 
-        offset.appendChild(disco1)
+        offset.appendChild(discos)
     }
 }
+
+//ajoelha se prepara
