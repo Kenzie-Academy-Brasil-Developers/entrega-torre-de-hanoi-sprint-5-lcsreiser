@@ -1,0 +1,67 @@
+header {
+    display: flex;
+    background-color: silver;
+    border: 2px solid;
+}
+
+header h2 {
+    margin: auto;
+}
+
+main {
+    height: 92vh;
+    width: 100%;
+    background-color: lightslategray;
+    display: flex;
+    flex-direction: column;
+}
+
+main #start {
+    display: flex;
+    background-color: whitesmoke;
+    width: 80%;
+    height: 30%;
+    margin: auto;
+    border: 1px solid;
+}
+
+main #offset {
+    display: flex;
+    background-color: whitesmoke;
+    width: 80%;
+    height: 30%;
+    margin: auto;
+    border: 1px solid;
+}
+
+main #end {
+    display: flex;
+    background-color: whitesmoke;
+    width: 80%;
+    height: 30%;
+    margin: auto;
+    border: 1px solid;
+}
+
+main #start:hover {
+    background-color: rgb(211, 211, 211);
+}
+
+main #offset:hover {
+    background-color: rgb(211, 211, 211);
+}
+
+main #end:hover {
+    background-color: rgb(211, 211, 211);
+}
+
+.torre {
+    margin: auto;
+    position:relative;
+    transform: translateY(50%);
+    background-color: black;
+    height: 50%;
+    width: 10px;
+    border-radius: 10px 10px 0 0 ;
+}
+
