@@ -49,18 +49,18 @@ main #end {
     align-items: center;
 }
 
-main #start:hover {
+main #Div1:hover {
     background-color: rgb(211, 211, 211);
     
 
 }
 
-main #offset:hover {
+main #Div2:hover {
     background-color: rgb(211, 211, 211);
     
 }
 
-main #end:hover {
+main #Div3:hover {
     background-color: rgb(211, 211, 211);
 }
 
