@@ -5,17 +5,20 @@ let count = 0
 
 criarTorre()
 
-//const botaofacil = document.getElementById('facil')
-
-
+//BOTÕES DE DIFICULDADE
 document.getElementById('facil').addEventListener('click', nivel)
 document.getElementById('medio').addEventListener('click', nivel)
 document.getElementById('dificil').addEventListener('click', nivel)
+document.getElementById('reset').addEventListener('click', reset)
+
+//BOTÃO RESET
+document.getElementById('reset').style.display = 'none';
+
+//
 document.querySelector('.t1').addEventListener('click', jogada)
 document.querySelector('.t2').addEventListener('click', jogada)
 document.querySelector('.t3').addEventListener('click', jogada)
 
-document.getElementById('dificil').style.display = 'none';
 
 function criarTorre(){
     for(let t = 1; t <= 3; t++){
@@ -27,9 +30,9 @@ function criarTorre(){
     }
 }
 
-function nivel(e) {
+function nivel(event) {
    
-    for(let i = parseInt(e.target.value); i >= 1; i--){
+    for(let i = parseInt(event.target.value); i >= 1; i--){
         let torre = document.querySelector('.t1')
         let disco = document.createElement('div')
         disco.setAttribute('id', 'd' + i)
@@ -42,12 +45,13 @@ function nivel(e) {
     document.getElementById('facil').style.display = 'none';
     document.getElementById('medio').style.display = 'none';
     document.getElementById('dificil').style.display = 'none';
+    document.getElementById('reset').style.display = 'inline';
 
 }
 
-function jogada(e){
+function jogada(event){
 
-    let t = e.currentTarget.id
+    let t = event.currentTarget.id
   
     if ( movimento == null ){
         movimento = torres[t].pop()
@@ -87,7 +91,7 @@ function movimentarDisco(proxTorre){
 
 //FUNÇÃO DE VERIFICAR A VITÓRIA
 function verificaVitoria(){
-    if ( torres[2].length ==  referenciaVitoria){
+    if (torres[0].length ==  referenciaVitoria && torres[1].length ==  referenciaVitoria){
         document.getElementById('msg').innerHTML = "Vitória!!!!!!!"
     }
 }
@@ -97,4 +101,8 @@ function verificaVitoria(){
 function contador(){
     count ++
     console.log(count)
+}
+
+function reset(){
+    console.log('aqui')
 }

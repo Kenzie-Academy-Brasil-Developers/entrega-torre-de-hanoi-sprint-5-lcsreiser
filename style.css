@@ -22,17 +22,24 @@ time, mark, audio, video {
 
 /* --------------------- */
 
+body{
+    margin: 10px
+}
+
 header {
     display: flex;
     background-color: silver;
     border: 2px solid;
+    height: 10vh;
 }
 
 header h2 {
     margin: auto;
+    font-size: 24px;
 }
 
 menu{
+    margin: 2vh 0;
     padding: 0;
     display: flex;
     justify-content: space-around;
@@ -44,15 +51,17 @@ menu>button{
     background-color: blue;
     color: white;
     border: 1px solid white;
-    padding: 10px;
+    padding: 10px 5vw;
 }
 
 main {
-    height: 92vh;
+    height: 90vh;
     width: 100%;
     background-color: lightslategray;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 main #Div1 {
@@ -60,7 +69,7 @@ main #Div1 {
     background-color: whitesmoke;
     width: 80%;
     height: 30%;
-    margin: auto;
+    margin: 5px auto;
     border: 1px solid;
     justify-content: center;
     align-items: center;
@@ -71,7 +80,7 @@ main #Div2 {
     background-color: whitesmoke;
     width: 80%;
     height: 30%;
-    margin: auto;
+    margin: 5px auto;
     border: 1px solid;
     justify-content: center;
     align-items: center;
@@ -82,7 +91,7 @@ main #Div3 {
     background-color: whitesmoke;
     width: 80%;
     height: 30%;
-    margin: auto;
+    margin: 5px auto;
     border: 1px solid;
     justify-content: center;
     align-items: center;
@@ -100,8 +109,8 @@ main #Div3:hover {
     background-color: rgb(211, 211, 211);
 }
 
-.botao{
-    margin: 5px 0;
+.botao:hover{
+    background-color: green;
 }
 
 .torre {
@@ -116,7 +125,7 @@ main #Div3:hover {
 }
 
 .disco {
-    height: 15px;
+    height: 17px;
     display: flex;
     border-radius: 5px;
 }
@@ -168,7 +177,7 @@ main #Div3:hover {
     }
 
     main #Div1, main #Div2, main #Div3{
-        height: 100%;
+        height: 80%;
     }
 
     header{
@@ -180,7 +189,55 @@ main #Div3:hover {
     }
 
     menu{
-        margin: 2vh 0;
+        margin: 1vh 0;
     }
 
+
+    .torre{
+        height: 130px;
+    }
+    .disco {
+        height: 22px;
+        display: flex;
+        border-radius: 5px;
+    }
+    
+    .d1 {
+        background-color: red;
+        width: 30px;
+        border: 2px solid;
+    }
+    
+    .d2 {
+        background-color: yellow;
+        width: 50px;
+        border: 2px solid;
+    }
+    
+    .d3 {
+        background-color: blue;
+        width: 90px;
+        border: 2px solid;
+    }
+    
+    .d4 {
+        background-color: orange;
+        width: 120px;
+        border: 2px solid;
+    }
+    
+    .d5 {
+        background-color: green;
+        width: 150px;
+        border: 2px solid;
+    }
+    
+    main #Div1, main #Div2, main #Div3{
+        width: 32vw;
+    }
+    
+
+
 }
+
+
