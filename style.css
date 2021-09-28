@@ -8,6 +8,21 @@ header h2 {
     margin: auto;
 }
 
+menu{
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+menu>button{
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    border: 1px solid white;
+    padding: 10px;
+}
+
 main {
     height: 92vh;
     width: 100%;
@@ -16,7 +31,7 @@ main {
     flex-direction: column;
 }
 
-main #start {
+main #Div1 {
     display: flex;
     background-color: whitesmoke;
     width: 80%;
@@ -27,7 +42,7 @@ main #start {
     align-items: center;
 }
 
-main #offset {
+main #Div2 {
     display: flex;
     background-color: whitesmoke;
     width: 80%;
@@ -38,7 +53,7 @@ main #offset {
     align-items: center;
 }
 
-main #end {
+main #Div3 {
     display: flex;
     background-color: whitesmoke;
     width: 80%;
@@ -51,13 +66,10 @@ main #end {
 
 main #Div1:hover {
     background-color: rgb(211, 211, 211);
-    
-
 }
 
 main #Div2:hover {
     background-color: rgb(211, 211, 211);
-    
 }
 
 main #Div3:hover {
@@ -66,14 +78,13 @@ main #Div3:hover {
 
 .torre {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     background-color: black;
     height: 100px;
     width: 10px;
     border-radius: 10px 10px 0 0;
     justify-content: end;
-    
 }
 
 .disco {
@@ -97,13 +108,23 @@ main #Div3:hover {
 .d3 {
     background-color: blue;
     width: 80px;
-   
     border: 2px solid;
 }
 
 .d4 {
     background-color: orange;
     width: 110px;
-   
     border: 2px solid;
+}
+
+.d5 {
+    background-color: green;
+    width: 140px;
+    border: 2px solid;
+}
+
+#msg{
+    text-align: center;
+    font-family: arial;
+    color: white;
 }
