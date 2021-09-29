@@ -163,7 +163,11 @@ main #Div3:hover {
 #msg{
     text-align: center;
     font-family: arial;
-    color: white;
+    color: red;
+    font-size: 20px;
+    z-index: 1;
+    position: absolute;
+    top: 160px;
 }
 
 @media screen and (min-width: 768px) {

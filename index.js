@@ -72,6 +72,7 @@ function verificaPossibilidade(proxTorre){
         if( movimento < torres[ proxTorre ][ torres[proxTorre].length-1 ] ){
             torres[proxTorre].push(movimento)
             movimentarDisco(proxTorre)
+            contador()
             verificaVitoria()
         }else{
             document.getElementById('msg').innerHTML = "Movimento inválido. Tente novamente!"
@@ -92,6 +93,7 @@ function movimentarDisco(proxTorre){
 //FUNÇÃO DE VERIFICAR A VITÓRIA
 function verificaVitoria(){
     if (torres[0].length ==  referenciaVitoria && torres[1].length ==  referenciaVitoria){
+        document.getElementById('msg').style.color = 'green'
         document.getElementById('msg').innerHTML = "Vitória!!!!!!!"
     }
 }
@@ -99,8 +101,9 @@ function verificaVitoria(){
 
 //FUNÇÃO DE CONTAGEM DE MOVIMENTOS
 function contador(){
-    count ++
+    count++
     console.log(count)
+
 }
 
 function reset(){
