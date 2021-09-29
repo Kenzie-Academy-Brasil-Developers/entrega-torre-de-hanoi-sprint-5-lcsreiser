@@ -104,5 +104,25 @@ function contador(){
 }
 
 function reset(){
-    console.log('aqui')
+   
+    let number = torres[0].length + torres[1].length + torres[2].length
+
+    
+
+
+    for(let i = number; i >= 1; i--){
+        let limparTorre = document.querySelector('.t'+number)
+        limparTorre.removeChild
+
+
+
+
+        let torre = document.querySelector('.t1')
+        let disco = document.createElement('div')
+        disco.setAttribute('id', 'd' + i)
+        disco.setAttribute('class', 'disco d' + i)
+        torre.appendChild(disco)
+
+        torres[0].push(i)
+}
 }
