@@ -1,4 +1,4 @@
-let torres = [ [ ], [ ], [ ] ]
+let torres = [[], [], []]
 let movimento = null
 let referenciaVitoria = 0
 let count = 0
@@ -11,8 +11,7 @@ document.getElementById('medio').addEventListener('click', nivel)
 document.getElementById('dificil').addEventListener('click', nivel)
 document.getElementById('reset').addEventListener('click', reset)
 
-//BOTÃO RESET
-document.getElementById('reset').style.display = 'none';
+
 
 //
 document.querySelector('.t1').addEventListener('click', jogada)
@@ -20,19 +19,24 @@ document.querySelector('.t2').addEventListener('click', jogada)
 document.querySelector('.t3').addEventListener('click', jogada)
 
 
-function criarTorre(){
-    for(let t = 1; t <= 3; t++){
-        let divPai = document.getElementById('Div'+t)
+
+function criarTorre() {
+    for (let t = 1; t <= 3; t++) {
+        let divPai = document.getElementById('Div' + t)
         let torre = document.createElement('div')
-        torre.setAttribute('id', t-1)
-        torre.setAttribute('class', 'torre t'+t)
+        torre.setAttribute('id', t - 1)
+        torre.setAttribute('class', 'torre t' + t)
         divPai.appendChild(torre)
     }
 }
 
 function nivel(event) {
-   
-    for(let i = parseInt(event.target.value); i >= 1; i--){
+
+    document.querySelector('.t1').innerHTML = ''
+    document.querySelector('.t2').innerHTML = ''
+    document.querySelector('.t3').innerHTML = ''
+
+    for (let i = parseInt(event.target.value); i >= 1; i--) {
         let torre = document.querySelector('.t1')
         let disco = document.createElement('div')
         disco.setAttribute('id', 'd' + i)
@@ -41,47 +45,41 @@ function nivel(event) {
 
         torres[0].push(i)
     }
-
-    document.getElementById('facil').style.display = 'none';
-    document.getElementById('medio').style.display = 'none';
-    document.getElementById('dificil').style.display = 'none';
-    document.getElementById('reset').style.display = 'inline';
-
 }
 
-function jogada(event){
+function jogada(event) {
 
     let t = event.currentTarget.id
-  
-    if ( movimento == null ){
+
+    if (movimento == null) {
         movimento = torres[t].pop()
-    }else {
+    } else {
         document.getElementById('msg').innerHTML = ""
         verificaPossibilidade(t)
     }
 }
 
-function verificaPossibilidade(proxTorre){
+function verificaPossibilidade(proxTorre) {
 
-    if(torres[proxTorre].length === 0){
+    if (torres[proxTorre].length === 0) {
         torres[proxTorre].push(movimento)
         movimentarDisco(proxTorre)
         contador()
         verificaVitoria()
-    }else {
-        if( movimento < torres[ proxTorre ][ torres[proxTorre].length-1 ] ){
+    } else {
+        if (movimento < torres[proxTorre][torres[proxTorre].length - 1]) {
             torres[proxTorre].push(movimento)
             movimentarDisco(proxTorre)
             contador()
             verificaVitoria()
-        }else{
+        } else {
             document.getElementById('msg').innerHTML = "Movimento inválido. Tente novamente!"
         }
     }
 }
 
-function movimentarDisco(proxTorre){
-    let disco = document.getElementById('d'+movimento)
+function movimentarDisco(proxTorre) {
+    let disco = document.getElementById('d' + movimento)
     disco.remove()
     disco.setAttribute('id', 'd' + movimento)
     disco.setAttribute('class', 'disco d' + movimento)
@@ -91,8 +89,8 @@ function movimentarDisco(proxTorre){
 }
 
 //FUNÇÃO DE VERIFICAR A VITÓRIA
-function verificaVitoria(){
-    if (torres[0].length ==  referenciaVitoria && torres[1].length ==  referenciaVitoria){
+function verificaVitoria() {
+    if (torres[0].length == referenciaVitoria && torres[1].length == referenciaVitoria) {
         document.getElementById('msg').style.color = 'green'
         document.getElementById('msg').innerHTML = "Vitória!!!!!!!"
     }
@@ -100,26 +98,24 @@ function verificaVitoria(){
 
 
 //FUNÇÃO DE CONTAGEM DE MOVIMENTOS
-function contador(){
+function contador() {
     count++
     console.log(count)
-
+    document.querySelector('.contador').innerHTML = ' Movimentos ' + count
 }
 
-function reset(){
-   
+function reset() {
+
     let number = torres[0].length + torres[1].length + torres[2].length
+    console.log(number)
 
-    
+    document.querySelector('.t1').innerHTML = ''
+    document.querySelector('.t2').innerHTML = ''
+    document.querySelector('.t3').innerHTML = ''
+    document.querySelector('.contador').innerHTML = ''
+    document.getElementById('msg').innerHTML = ''
 
-
-    for(let i = number; i >= 1; i--){
-        let limparTorre = document.querySelector('.t'+number)
-        limparTorre.removeChild
-
-
-
-
+    for (let i = number; i >= 1; i--) {
         let torre = document.querySelector('.t1')
         let disco = document.createElement('div')
         disco.setAttribute('id', 'd' + i)
@@ -127,5 +123,5 @@ function reset(){
         torre.appendChild(disco)
 
         torres[0].push(i)
-}
+    }
 }
