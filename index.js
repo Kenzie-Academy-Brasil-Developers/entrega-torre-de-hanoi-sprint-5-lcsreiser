@@ -74,6 +74,7 @@ function verificaPossibilidade(proxTorre) {
             verificaVitoria()
         } else {
             document.getElementById('msg').innerHTML = "Movimento inválido. Tente novamente!"
+            document.getElementById('msg').style.background = 'red'
         }
     }
 }
@@ -93,6 +94,7 @@ function verificaVitoria() {
     if (torres[0].length == referenciaVitoria && torres[1].length == referenciaVitoria) {
         document.getElementById('msg').style.color = 'green'
         document.getElementById('msg').innerHTML = "Vitória!!!!!!!"
+        document.getElementById('msg').style.background = 'lightgreen'
     }
 }
 
@@ -100,7 +102,6 @@ function verificaVitoria() {
 //FUNÇÃO DE CONTAGEM DE MOVIMENTOS
 function contador() {
     count++
-    console.log(count)
     document.querySelector('.contador').innerHTML = ' Movimentos ' + count
 }
 
