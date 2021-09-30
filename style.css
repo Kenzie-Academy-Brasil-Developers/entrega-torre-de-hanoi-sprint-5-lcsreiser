@@ -1,28 +1,16 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
     list-style: none;
     box-sizing: border-box;
 }
 
 /* --------------------- */
 
-body{
+body {
     margin: 10px
 }
 
@@ -30,7 +18,7 @@ header {
     display: flex;
     background-color: silver;
     border: 2px solid;
-    height: 10vh;
+    height: 5vh;
 }
 
 header h2 {
@@ -38,7 +26,7 @@ header h2 {
     font-size: 24px;
 }
 
-menu{
+menu {
     margin: 2vh 0;
     padding: 0;
     display: flex;
@@ -46,7 +34,7 @@ menu{
     align-items: center;
 }
 
-menu>button{
+menu>button {
     border-radius: 5px;
     background-color: blue;
     color: white;
@@ -60,8 +48,6 @@ main {
     background-color: lightslategray;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 main #Div1 {
@@ -109,7 +95,7 @@ main #Div3:hover {
     background-color: rgb(211, 211, 211);
 }
 
-.botao:hover{
+.botao:hover {
     background-color: green;
 }
 
@@ -160,44 +146,44 @@ main #Div3:hover {
     border: 2px solid;
 }
 
-#msg{
+#msg {
     text-align: center;
     font-family: arial;
-    color: red;
     font-size: 20px;
     z-index: 1;
     position: absolute;
-    top: 160px;
+    top: 40%;
+    background-color: lightgreen;
+    width: 100%;
+}
+
+.contador {
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+    font-weight: 600;
 }
 
 @media screen and (min-width: 768px) {
-
-    main{
-        flex-direction: row;
+    main {
+        margin-top: 10px;
+        flex-direction: column;
         height: 70vh;
         width: 100%;
         background-color: lightslategray;
         display: flex;
+        border: 2px solid black;
     }
-
-    main #Div1, main #Div2, main #Div3{
+    main #Div1, main #Div2, main #Div3 {
         height: 80%;
     }
-
-    header{
-        height: 15vh;
-    }
-
     header h2 {
         font-size: 32px
     }
-
-    menu{
+    menu {
         margin: 1vh 0;
     }
-
-
-    .torre{
+    .torre {
         height: 130px;
     }
     .disco {
@@ -205,43 +191,42 @@ main #Div3:hover {
         display: flex;
         border-radius: 5px;
     }
-    
     .d1 {
         background-color: red;
         width: 30px;
         border: 2px solid;
     }
-    
     .d2 {
         background-color: yellow;
         width: 50px;
         border: 2px solid;
     }
-    
     .d3 {
         background-color: blue;
         width: 90px;
         border: 2px solid;
     }
-    
     .d4 {
         background-color: orange;
         width: 120px;
         border: 2px solid;
     }
-    
     .d5 {
         background-color: green;
         width: 150px;
         border: 2px solid;
     }
-    
-    main #Div1, main #Div2, main #Div3{
+    main #Div1, main #Div2, main #Div3 {
         width: 32vw;
     }
-    
-
-
+    .box {
+        display: flex;
+        height: 50%;
+        position: relative;
+        transform: translateY(10%);
+    }
+    #msg {
+        font-size: 40px;
+        top: 30%;
+    }
 }
-
-
