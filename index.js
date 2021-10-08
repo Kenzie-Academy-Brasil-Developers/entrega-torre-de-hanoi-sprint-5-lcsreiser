@@ -14,9 +14,12 @@ document.getElementById('reset').addEventListener('click', reset)
 
 
 //
-document.querySelector('.t1').addEventListener('click', jogada)
-document.querySelector('.t2').addEventListener('click', jogada)
-document.querySelector('.t3').addEventListener('click', jogada)
+
+
+document.querySelector('#Div1').addEventListener('click',jogada)
+document.querySelector('#Div2').addEventListener('click',jogada)
+document.querySelector('#Div3').addEventListener('click',jogada)
+
 
 
 
@@ -32,6 +35,7 @@ function criarTorre() {
 
 function nivel(event) {
 
+    torres = [[], [], []]
     document.querySelector('.t1').innerHTML = ''
     document.querySelector('.t2').innerHTML = ''
     document.querySelector('.t3').innerHTML = ''
@@ -49,14 +53,16 @@ function nivel(event) {
 
 function jogada(event) {
 
-    let t = event.currentTarget.id
-
+    let t = event.currentTarget.id.slice(-1)-1
+    
+    console.log(t)
     if (movimento == null) {
         movimento = torres[t].pop()
     } else {
         document.getElementById('msg').innerHTML = ""
         verificaPossibilidade(t)
     }
+   
 }
 
 function verificaPossibilidade(proxTorre) {
@@ -98,7 +104,7 @@ function verificaVitoria() {
     }
 }
 
-
+length
 //FUNÇÃO DE CONTAGEM DE MOVIMENTOS
 function contador() {
     count++
@@ -125,4 +131,6 @@ function reset() {
 
         torres[0].push(i)
     }
+    
+    
 }
